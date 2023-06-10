@@ -91,7 +91,7 @@ function toBlockateCoordinates(instance, fixer)
         return
     end
 
-    return ("%s %s %s/%s"):format(getAxisString(instance_pos.X), getAxisString(instance_pos.Y), getAxisString(instance_pos.Z), instance_orientation)
+    return ("%s %s %s/%s"):format(getAxisString(math.round(instance_pos.X)), getAxisString(math.round(instance_pos.Y)), getAxisString(math.round(instance_pos.Z)), instance_orientation)
 end 
 
 -- toBlockateSize<instance: Instance> -> number [Internal!]
