@@ -1,3 +1,9 @@
+if not getgenv().BlockateWorldUtilities_Settings then
+	getgenv().BlockateWorldUtilities_Settings = {
+    		TIME_BETWEEN_BLOCK_PLACE = 0.05, -- task.wait(getgenv().BlockateWorldUtilities_Settings.TIME_BETWEEN_BLOCK_PLACE)
+	}
+end
+
 local WorldCopyPaste_Module = {}
 -- vars;
 local modules = game:GetService("ReplicatedStorage").Modules
@@ -294,7 +300,7 @@ for i,v in pairs(WorldData) do
         end
     end
 
-    task.wait(0.04)
+    task.wait(getgenv().BlockateWorldUtilities_Settings.TIME_BETWEEN_BLOCK_PLACE)
     
     blockCount = i
     task.spawn(function()
