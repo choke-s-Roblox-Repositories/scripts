@@ -294,7 +294,7 @@ for i,v in pairs(WorldData) do
         end
     end
 
-    task.wait(0.03)
+    task.wait(0.04)
     
     blockCount = i
     task.spawn(function()
