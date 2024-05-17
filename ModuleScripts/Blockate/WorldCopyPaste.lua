@@ -1,6 +1,7 @@
 if not getgenv().BlockateWorldUtilities_Settings then
 	getgenv().BlockateWorldUtilities_Settings = {
     		TIME_BETWEEN_BLOCK_PLACE = 0.05, -- task.wait(getgenv().BlockateWorldUtilities_Settings.TIME_BETWEEN_BLOCK_PLACE)
+            	WAIT_METHOD = task.wait
 	}
 end
 
@@ -300,7 +301,7 @@ for i,v in pairs(WorldData) do
         end
     end
 
-    task.wait(getgenv().BlockateWorldUtilities_Settings.TIME_BETWEEN_BLOCK_PLACE)
+    getgenv().BlockateWorldUtilities_Settings.WAIT_METHOD(getgenv().BlockateWorldUtilities_Settings.TIME_BETWEEN_BLOCK_PLACE)
     
     blockCount = i
     task.spawn(function()
