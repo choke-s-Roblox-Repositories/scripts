@@ -226,9 +226,9 @@ for _, block in ipairs(workspace.Blocks:GetChildren()) do
         continue
     end]]
     
-    if getBlockProperties(block)[2]["Shape"] == 6 then
-        continue
-    end
+    --if getBlockProperties(block)[2]["Shape"] == 6 then
+    --    continue
+    --end
     table.insert(saved, getBlockProperties(block))
 end
 
